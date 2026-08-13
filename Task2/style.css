@@ -1,0 +1,579 @@
+```css
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#667eea,#764ba2);
+
+    transition:0.5s;
+
+}
+
+
+
+
+/* Light Theme */
+
+body.light{
+
+    background:
+    linear-gradient(135deg,#f6d365,#fda085);
+
+}
+
+
+
+
+
+.container{
+
+    width:380px;
+
+    max-width:100%;
+
+}
+
+
+
+
+
+/* Header */
+
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    color:white;
+
+}
+
+
+
+.top h1{
+
+    font-size:28px;
+
+}
+
+
+
+.top button{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:25px;
+
+}
+
+
+
+
+
+/* Calculator */
+
+
+.calculator{
+
+    background:
+    rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(20px);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,0.3);
+
+}
+
+
+
+
+
+/* Display */
+
+
+#display{
+
+
+    width:100%;
+
+    height:80px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:35px;
+
+    text-align:right;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+/* AI Calculator */
+
+
+.ai-box{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.ai-box input{
+
+
+    flex:1;
+
+    height:45px;
+
+    border-radius:15px;
+
+    border:none;
+
+    outline:none;
+
+    padding:10px;
+
+    font-size:16px;
+
+}
+
+
+
+.ai-box button{
+
+
+    width:50px;
+
+    height:45px;
+
+    border-radius:15px;
+
+    background:#673ab7;
+
+    color:white;
+
+}
+
+
+
+
+
+/* Scientific Mode Button */
+
+
+.mode{
+
+    width:100%;
+
+    height:45px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    background:#2196f3;
+
+    color:white;
+
+}
+
+
+
+
+
+/* Scientific Buttons */
+
+
+.scientific{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+    margin-bottom:15px;
+
+
+    animation:slide .3s ease;
+
+}
+
+
+
+.scientific button{
+
+
+    height:45px;
+
+    font-size:16px;
+
+
+}
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+@keyframes slide{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* Main Buttons */
+
+
+.buttons{
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:12px;
+
+}
+
+
+
+
+
+button{
+
+
+    height:60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    background:white;
+
+    transition:0.25s;
+
+}
+
+
+
+
+button:hover{
+
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+    0 10px 20px rgba(0,0,0,0.2);
+
+
+}
+
+
+
+
+
+/* Operators */
+
+
+.operator{
+
+
+    background:#ff9800;
+
+    color:white;
+
+}
+
+
+
+
+
+.special{
+
+
+    background:#e91e63;
+
+    color:white;
+
+}
+
+
+
+
+
+.equal{
+
+
+    background:#4caf50;
+
+    color:white;
+
+}
+
+
+
+
+
+.zero{
+
+
+    grid-column:span 2;
+
+}
+
+
+
+
+
+
+
+/* History */
+
+
+.history{
+
+
+    margin-top:20px;
+
+    background:
+
+    rgba(255,255,255,0.18);
+
+
+    backdrop-filter:blur(20px);
+
+
+    padding:20px;
+
+
+    border-radius:25px;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.history h2{
+
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+#historyList{
+
+
+    list-style:none;
+
+    max-height:180px;
+
+    overflow-y:auto;
+
+
+}
+
+
+
+
+#historyList li{
+
+
+    background:white;
+
+    color:#333;
+
+    padding:10px;
+
+    margin:8px 0;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+.clearHistory{
+
+
+    width:100%;
+
+    height:45px;
+
+    margin-top:10px;
+
+    background:#d32f2f;
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:420px){
+
+
+
+.container{
+
+    width:100%;
+
+}
+
+
+
+.top h1{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+#display{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+button{
+
+
+    height:55px;
+
+    font-size:20px;
+
+
+}
+
+
+
+}
+```

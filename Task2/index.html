@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Scientific Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="top">
+
+<h1>🤖 AI Calculator</h1>
+
+<button id="themeBtn">
+🌙
+</button>
+
+</div>
+
+
+
+<div class="calculator">
+
+
+<input id="display" disabled placeholder="0">
+
+
+
+<!-- AI Input -->
+
+<div class="ai-box">
+
+<input 
+id="aiInput"
+placeholder="Ask calculation...">
+
+<button onclick="aiCalculate()">
+🤖
+</button>
+
+</div>
+
+
+
+
+<button class="mode"
+onclick="toggleScientific()">
+
+🧪 Scientific Mode
+
+</button>
+
+
+
+
+<!-- Scientific Buttons -->
+
+<div id="scientific"
+class="scientific hidden">
+
+
+<button onclick="scientific('sin')">
+sin
+</button>
+
+
+<button onclick="scientific('cos')">
+cos
+</button>
+
+
+<button onclick="scientific('tan')">
+tan
+</button>
+
+
+<button onclick="scientific('sqrt')">
+√
+</button>
+
+
+<button onclick="scientific('square')">
+x²
+</button>
+
+
+<button onclick="scientific('log')">
+log
+</button>
+
+
+<button onclick="appendValue('Math.PI')">
+π
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="buttons">
+
+
+<button class="special" onclick="clearDisplay()">C</button>
+
+<button class="special" onclick="deleteNumber()">⌫</button>
+
+<button class="special" onclick="percentage()">%</button>
+
+<button class="operator" onclick="appendValue('/')">
+÷
+</button>
+
+
+<button onclick="appendValue('7')">7</button>
+
+<button onclick="appendValue('8')">8</button>
+
+<button onclick="appendValue('9')">9</button>
+
+<button onclick="appendValue('*')">
+×
+</button>
+
+
+
+<button onclick="appendValue('4')">4</button>
+
+<button onclick="appendValue('5')">5</button>
+
+<button onclick="appendValue('6')">6</button>
+
+<button onclick="appendValue('-')">
+−
+</button>
+
+
+
+<button onclick="appendValue('1')">1</button>
+
+<button onclick="appendValue('2')">2</button>
+
+<button onclick="appendValue('3')">3</button>
+
+<button onclick="appendValue('+')">
++
+</button>
+
+
+
+<button class="zero" onclick="appendValue('0')">
+0
+</button>
+
+
+<button onclick="appendValue('.')">
+.
+</button>
+
+
+<button class="equal" onclick="calculate()">
+=
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="history">
+
+<h2>
+📜 History
+</h2>
+
+<ul id="historyList"></ul>
+
+
+<button onclick="clearHistory()">
+Clear
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

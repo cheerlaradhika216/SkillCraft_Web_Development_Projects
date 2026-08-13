@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Todo Master</title>
+
+<link rel="icon" href="assets/logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="app">
+
+
+<header>
+
+
+<div class="brand">
+
+<img src="assets/logo.png">
+
+<div>
+
+<h1>Todo Master</h1>
+
+<p>Stay organized 🚀</p>
+
+</div>
+
+</div>
+
+
+<button id="themeBtn">
+🌙
+</button>
+
+
+</header>
+
+
+
+<div class="input-area">
+
+
+<input id="taskInput"
+placeholder="Enter your task...">
+
+
+<select id="priority">
+
+<option value="High">
+🔴 High
+</option>
+
+<option value="Medium" selected>
+🟡 Medium
+</option>
+
+<option value="Low">
+🟢 Low
+</option>
+
+</select>
+
+
+<input type="datetime-local" id="dateInput">
+
+
+<button id="addBtn">
+Add
+</button>
+
+
+</div>
+
+
+
+<input 
+class="search"
+id="searchInput"
+placeholder="Search tasks...">
+
+
+
+<div class="filters">
+
+<button class="filter active" data-filter="all">
+All
+</button>
+
+<button class="filter" data-filter="active">
+Active
+</button>
+
+<button class="filter" data-filter="completed">
+Completed
+</button>
+
+
+</div>
+
+
+
+
+<ul id="taskList">
+
+</ul>
+
+
+
+
+<div class="footer">
+
+
+<p>
+Tasks:
+<span id="count">0</span>
+</p>
+
+
+<button id="clearBtn">
+Clear All
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

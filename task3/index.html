@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QuizMaster</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="quiz-container">
+
+
+
+<!-- LOGIN SCREEN -->
+
+
+<div id="login-screen">
+
+
+<img src="assets/logo.png" class="logo">
+
+
+<h1>
+QuizMaster
+</h1>
+
+
+<p>
+Challenge Your Knowledge 🚀
+</p>
+
+
+
+<input 
+type="text"
+id="username"
+placeholder="Enter your name"
+>
+
+
+
+<button onclick="login()">
+
+Start Quiz 🚀
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- HOME SCREEN -->
+
+
+<div id="start-screen" class="hide">
+
+
+
+<div class="profile">
+
+
+<h2>
+Welcome
+</h2>
+
+
+<h3 id="playerName">
+
+Player
+
+</h3>
+
+
+
+<button onclick="logout()">
+
+Logout 🚪
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Choose Category
+</h2>
+
+
+
+
+
+<div class="categories">
+
+
+
+
+
+<div class="category-card science"
+onclick="startQuiz('science')">
+
+
+<div class="icon">
+🔬
+</div>
+
+
+<h3>
+Science
+</h3>
+
+
+<p>
+Explore discoveries
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="category-card tech"
+onclick="startQuiz('technology')">
+
+
+<div class="icon">
+💻
+</div>
+
+
+<h3>
+Technology
+</h3>
+
+
+<p>
+Test coding skills
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="category-card general"
+onclick="startQuiz('general')">
+
+
+<div class="icon">
+🌎
+</div>
+
+
+<h3>
+General
+</h3>
+
+
+<p>
+Know the world
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<h2>
+Select Difficulty
+</h2>
+
+
+
+<div class="difficulty">
+
+
+<button onclick="setDifficulty('easy')">
+
+🟢 Easy
+
+</button>
+
+
+<button onclick="setDifficulty('medium')">
+
+🟡 Medium
+
+</button>
+
+
+<button onclick="setDifficulty('hard')">
+
+🔴 Hard
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="leaderboard">
+
+
+<h2>
+🏆 Leaderboard
+</h2>
+
+
+<p id="bestScore">
+
+No score yet
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- QUIZ SCREEN -->
+
+
+<div id="quiz-screen" class="hide">
+
+
+
+
+
+<div class="top-bar">
+
+
+<span>
+
+Question 
+
+<span id="question-number">
+
+1
+
+</span>
+
+</span>
+
+
+
+
+
+<span class="timer">
+
+⏳
+
+<span id="time">
+
+15
+
+</span>
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="progress">
+
+<div id="progress-bar">
+
+</div>
+
+</div>
+
+
+
+
+
+
+<h2 id="question">
+
+Question
+
+</h2>
+
+
+
+
+
+
+
+<div id="answers">
+
+</div>
+
+
+
+
+
+
+
+
+<div class="lifelines">
+
+
+<button onclick="useHint()">
+
+🤖 AI Hint
+
+</button>
+
+
+
+<button onclick="fiftyFifty()">
+
+✂️ 50/50
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<button id="next-btn">
+
+Next ➡️
+
+</button>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- RESULT SCREEN -->
+
+
+<div id="result-screen" class="hide">
+
+
+
+<img src="assets/logo.png" class="result-logo">
+
+
+
+<h1>
+
+🎉 Completed
+
+</h1>
+
+
+
+<h2>
+
+Your Score
+
+</h2>
+
+
+
+
+<h1 id="score">
+
+0
+
+</h1>
+
+
+
+
+<h2 id="level">
+
+⭐ Level 1
+
+</h2>
+
+
+
+<p id="xp">
+
+⚡ XP : 0
+
+</p>
+
+
+
+
+<div id="confetti">
+
+</div>
+
+
+
+
+
+
+<button onclick="restartQuiz()">
+
+Play Again 🔄
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<audio id="correctSound"
+src="assets/sounds/correct.mp3">
+
+</audio>
+
+
+
+<audio id="wrongSound"
+src="assets/sounds/wrong.mp3">
+
+</audio>
+
+
+
+<audio id="clickSound"
+src="assets/sounds/click.mp3">
+
+</audio>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
