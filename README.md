@@ -1,14 +1,15 @@
-SkillCraft Technology — Development Projects
-A collection of web development projects completed as part of the SkillCraft Technology internship.
-Tasks
+SkillCraft Web Development Internship
+Overview
+This repository contains projects completed as part of my Web Development Internship at SkillCraft Technology.
+Completed Tasks
 Task 01 — Responsive Landing Page
 Interactive navigation menu with responsive design.
 Task 02 — Calculator Web Application
-Fully functional calculator with basic arithmetic operations, DOM manipulation, event handling, input parsing, button interactions, and keyboard input support.
+Fully functional calculator with basic arithmetic operations, DOM manipulation, event handling, and keyboard input support.
 Task 03 — Quiz Game Application
-Interactive multiple-choice quiz application that displays questions, collects answers, and provides a final score.
+Interactive quiz application with score tracking.
 Task 04 — To-Do Web Application
-Task management application that allows users to add, organize, edit, complete, and manage tasks with date and time functionality.
+Task management application with CRUD functionality.
 Technologies Used
 HTML5
 CSS3
@@ -16,18 +17,8 @@ JavaScript
 Skills Gained
 Responsive Web Design
 DOM Manipulation
-JavaScript
+JavaScript Programming
 Event Handling
-User Interface Development
-Form and Input Handling
-Interactive Web Applications
-Project Structure
-Development-Projects/
-│
-├── Task-01/
-├── Task-02/
-├── Task-03/
-├── Task-04/
-└── README.md
+UI/UX Development
 Author
 Cheerla Radhika
