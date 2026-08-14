@@ -46,5 +46,4 @@ QuizMaster/
 - More categories
 
 ## 👨‍💻 Author
-
-Your Name
+cheerla Radhika 
